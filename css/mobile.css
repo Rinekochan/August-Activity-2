@@ -1,0 +1,130 @@
+/*
+ * Header styles
+ */
+
+.header-container {
+  padding: 15px 20px;
+}
+
+/*
+ * Hamburger menu styles
+ */
+
+.hamburger-menu {
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.hamburger-menu span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: var(--text-light);
+  transition: all 0.3s ease;
+}
+
+.hamburger-menu.active span:first-child {
+  transform: rotate(45deg) translate(7px, 6px);
+}
+
+.hamburger-menu.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-menu.active span:last-child {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/*
+ * Navigation styles
+ */
+
+.main-nav {
+  position: fixed;
+  top: 0;
+  right: -100%; /* Push it off-screen */
+  width: 80%;
+  max-width: 250px;
+  height: 100vh;
+  background-color: var(--primary-navy);
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 80px 30px 30px;
+  transition: right 0.3s ease;
+}
+
+.main-nav.active {
+  right: 0;
+}
+
+.main-nav ul {
+  flex-direction: column;
+  width: 100%;
+  gap: 15px;
+}
+
+.main-nav li {
+  width: 100%;
+}
+
+.main-nav a {
+  display: block;
+  padding: 10px 0;
+  font-size: 18px;
+}
+
+/*
+ * Hero section styles
+ */
+
+.hero h1 {
+  font-size: 2.5rem;
+}
+
+.hero .subtitle {
+  font-size: 1rem;
+}
+
+/*
+ * Grid section styles
+ */
+
+.grid-section {
+  grid-template-columns: 1fr;
+}
+
+.grid-section article {
+  padding: 60px 25px;
+  text-align: center;
+}
+
+.grid-section article h2 {
+  font-size: 2rem;
+  max-width: 100%;
+}
+
+/*
+ * Footer styles
+ */
+
+.footer-nav ul {
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.footer-nav ul li {
+  width: 100%;
+  text-align: left;
+  border-top: 1px solid #676767;
+  padding: 10px 0;
+
+}
