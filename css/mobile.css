@@ -109,6 +109,16 @@
 .grid-section article h2 {
   font-size: 2rem;
   max-width: 100%;
+  transform: translateX(0);
+}
+
+/* Just make simple animations for mobile */
+.animate-on-scroll {
+  opacity: 0;
+}
+
+.animate-on-scroll.in-view {
+  opacity: 1;
 }
 
 /*

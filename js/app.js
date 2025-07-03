@@ -18,4 +18,19 @@ document.addEventListener('DOMContentLoaded', () => {
       document.body.classList.remove('menu-open');
     });
   });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("in-view");
+        observer.unobserve(entry.target); // Remove observer after animation
+      }
+    });
+  }, {
+    threshold: 0.1 // Trigger when 10% is visible
+  });
+
+  document.querySelectorAll('.animate-on-scroll').forEach(elem => {
+    observer.observe(elem);
+  });
 });
