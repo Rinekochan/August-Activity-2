@@ -6,15 +6,15 @@
   /* Brand colors */
   --primary-green: #77a83f;
   --primary-green-dark: #577e2f;
-  --primary-yellow: #e9ed72;
-  --primary-navy: #1b1846;
+  --primary-yellow: #ebe772;
+  --primary-navy: #1b1947;
 
   /* UI colors */
   --text-dark: #000000;
   --text-light: #ffffff;
 
   /* Overlay colors */
-  --overlay-dark: rgba(0, 0, 0, 0.625);
+  --overlay-dark: rgba(0, 0, 0, 0.6);
 
   /* Background colors */
   --bg-light: #fbfbfb;
@@ -64,7 +64,7 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -218,5 +218,37 @@ img {
   object-fit: cover;
 }
 
+/*
+ * Footer styles
+ */
 
+.site-footer {
+  background-color: var(--primary-navy);
+  padding: 40px 0;
+}
 
+.footer-nav {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.footer-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  gap: 30px;
+}
+
+.footer-nav a {
+  color: var(--text-light);
+  text-decoration: none;
+  font-weight: 300;
+  transition: opacity 0.3s ease;
+}
+
+.footer-nav a:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
