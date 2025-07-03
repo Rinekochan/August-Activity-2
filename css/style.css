@@ -27,17 +27,6 @@ img {
   height: auto;
 }
 
-::-moz-selection {
-  background: #b3d4fc;
-  text-shadow: none;
-}
-
-::selection {
-  background: #b3d4fc;
-  text-shadow: none;
-}
-
-
 /*
  * Header styles
  */
@@ -73,13 +62,13 @@ img {
 .main-nav {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 20px;
 }
 
 .main-nav ul {
   display: flex;
   list-style: none;
-  gap: 30px;
+  gap: 20px;
   margin: 0;
   padding: 0;
 }
@@ -118,7 +107,61 @@ img {
 }
 
 .btn.book-session:hover {
-  background-color: #699837;
+  background-color: #577e2f;
+}
+
+/*
+ * Hero section styles
+ */
+
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 2;
+}
+
+.hero-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.675); /* Dark overlay */
+  z-index: 3;
+}
+
+.hero-content {
+  position: relative;
+  color: #fff;
+  text-align: center;
+  margin: auto;
+  z-index: 3;
+  width: 100%;
+}
+
+.hero h1 {
+  font-size: 4.5rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.hero .subtitle {
+  font-size: 1.5rem;
+  font-weight: 400;
 }
 
 
