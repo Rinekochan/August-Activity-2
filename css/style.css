@@ -2,6 +2,24 @@
  * Global styles for the website
  */
 
+:root {
+  /* Brand colors */
+  --primary-green: #77a83f;
+  --primary-green-dark: #577e2f;
+  --primary-yellow: #e9ed72;
+  --primary-navy: #1b1846;
+
+  /* UI colors */
+  --text-dark: #000000;
+  --text-light: #ffffff;
+
+  /* Overlay colors */
+  --overlay-dark: rgba(0, 0, 0, 0.625);
+
+  /* Background colors */
+  --bg-light: #fbfbfb;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -9,8 +27,8 @@
 }
 
 html {
-  background-color: #fbfbfb;
-  color: #333;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
   font-size: 1em;
   line-height: 1.4;
   font-family: "Lato", sans-serif;
@@ -78,7 +96,7 @@ img {
 }
 
 .main-nav a {
-  color: #fff;
+  color: var(--text-light);
   text-decoration: none;
   font-weight: 500;
   transition: opacity 0.3s ease;
@@ -94,8 +112,8 @@ img {
  */
 
 .btn.book-session {
-  background-color: #77a83f;
-  color: #fff;
+  background-color: var(--primary-green);
+  color: var(--text-light);
   font-family: 'Lato', sans-serif;
   font-size: 16px;
   padding: 12px 24px;
@@ -107,7 +125,7 @@ img {
 }
 
 .btn.book-session:hover {
-  background-color: #577e2f;
+  background-color: var(--primary-green-dark);
 }
 
 /*
@@ -140,13 +158,13 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.675); /* Dark overlay */
+  background-color: var(--overlay-dark); /* Dark overlay */
   z-index: 3;
 }
 
 .hero-content {
   position: relative;
-  color: #fff;
+  color: var(--text-light);
   text-align: center;
   margin: auto;
   z-index: 3;
@@ -164,6 +182,41 @@ img {
   font-weight: 400;
 }
 
+/*
+ * Grid section styles
+ */
+
+.grid-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 50vh;
+}
+
+.grid-section-container {
+  display: contents;
+}
+
+.grid-section article {
+  background-color: var(--primary-yellow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 80px;
+}
+
+.grid-section article h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--primary-navy);
+  line-height: 1.2;
+  max-width: 450px;
+}
+
+.grid-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 
 
