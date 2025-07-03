@@ -33,4 +33,30 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.animate-on-scroll').forEach(elem => {
     observer.observe(elem);
   });
+
+
+  // Handle booking button click (I will put it as successful for now)
+  const bookButton = document.querySelector('.btn.book-session');
+  bookButton.addEventListener('click', () => {
+    // Create notification element
+    const notification = document.createElement('div');
+    notification.className = 'notification success';
+    notification.innerHTML = '<p>Booking successful! We will contact you soon.</p>';
+
+    // Add to body
+    document.body.appendChild(notification);
+
+    // Show notification with animation
+    setTimeout(() => {
+      notification.classList.add('show');
+    }, 10);
+
+    // Auto-dismiss after 3 seconds
+    setTimeout(() => {
+      notification.classList.remove('show');
+      setTimeout(() => {
+        notification.remove();
+      }, 500);
+    }, 3000);
+  });
 });
