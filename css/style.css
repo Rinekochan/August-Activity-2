@@ -192,10 +192,6 @@ img {
   min-height: 50vh;
 }
 
-.grid-section-container {
-  display: contents;
-}
-
 .grid-section article {
   background-color: var(--primary-yellow);
   display: flex;
